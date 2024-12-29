@@ -6,8 +6,13 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Obs : Scafoold é um widget do material
     return Scaffold(
-      body: Header(),
+      body: Column(
+        children: [
+          Header(),
+        ],
+      ),
     );
   }
 }
