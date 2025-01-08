@@ -1,3 +1,4 @@
+import 'package:bank/screens/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -10,16 +11,11 @@ class Header extends StatelessWidget {
       decoration: BoxDecoration(
         //A propriedade decoration: BoxDecoration serve para adicionar estilos visuais ao contêiner, como cor de fundo, borda, sombra e arredondamento dos cantos.
         gradient: LinearGradient(
-          //A propriedade gradient: LinearGradient dentro do BoxDecoration serve para aplicar um gradiente de cores, criando uma transição suave entre duas ou mais cores em uma direção específica (horizontal, vertical, diagonal, etc.). Ela é importante para criar efeitos visuais mais atraentes e dinâmicos no fundo de um contêiner.
-          begin: Alignment.topCenter, // Começo
-          end: Alignment.bottomCenter, // Fim
-          colors: <Color>[
-            // Cores
-            Color.fromRGBO(103, 99, 234, 1.0),
-            Color.fromRGBO(155, 105, 254, 1.0),
-            Color.fromRGBO(195, 107, 255, 1.0),
-          ],
-        ),
+            //A propriedade gradient: LinearGradient dentro do BoxDecoration serve para aplicar um gradiente de cores, criando uma transição suave entre duas ou mais cores em uma direção específica (horizontal, vertical, diagonal, etc.). Ela é importante para criar efeitos visuais mais atraentes e dinâmicos no fundo de um contêiner.
+            begin: Alignment.topCenter, // Começo
+            end: Alignment.bottomCenter, // Fim
+            colors: // Cores
+                ThemeColors.headerGradient),
         borderRadius: BorderRadius.vertical(
           //A propriedade borderRadius: BorderRadius.vertical no BoxDecoration serve para arredondar os cantos superiores e inferiores de um contêiner de forma diferente. Ela permite definir raios de curvatura específicos para os cantos superior e inferior, proporcionando um estilo visual mais personaliza
           bottom: Radius.circular(10),
@@ -47,24 +43,14 @@ class Header extends StatelessWidget {
                 //   ),
                 Text.rich(
                   // O Text.rich serve para exibir texto com diferentes estilos em uma única linha ou bloco, permitindo aplicar estilos distintos a partes do texto
-                  TextSpan(
-                      text: '\$',
-                      style: TextStyle(fontSize: 16), // tamanho da fonte,
-                      children: [
-                        TextSpan(
-                          text: '1000,00',
-                          style: TextStyle(
-                            fontSize: 28, // tamanho da fonte
-                            fontWeight: FontWeight
-                                .bold, // fontWeight serve para definir a espessura da fonte
-                          ),
-                        )
-                      ]),
-                ),
-                Text("Balanço disponivel",
-                    style: TextStyle(
-                        fontSize: 16) // fontSize serve para aumentar a font.
+                  TextSpan(text: '\$', children: [
+                    TextSpan(
+                      text: '1000,00',
+                      style: Theme.of(context).textTheme.bodyLarge
                     )
+                  ]),
+                ),
+                Text("Balanço disponivel")
               ],
             ),
             Icon(

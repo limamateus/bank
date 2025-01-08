@@ -1,4 +1,5 @@
 import 'package:bank/screens/Home/home_screen.dart';
+import 'package:bank/screens/theme/my_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class Bank extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       title: "Bank",
+      theme: MyTheme,
       home: Home(),
     );
   }

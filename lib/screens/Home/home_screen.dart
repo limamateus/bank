@@ -1,3 +1,4 @@
+import 'package:bank/screens/components/box_card.dart';
 import 'package:bank/screens/components/sections/header.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class Home extends StatelessWidget {
       body: Column(
         children: [
           Header(),
+          BoxCard(boxContent: Text("Olá mundo"))
         ],
       ),
     );
