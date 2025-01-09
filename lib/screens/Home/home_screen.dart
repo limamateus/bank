@@ -1,6 +1,7 @@
 import 'package:bank/screens/components/colorDot.dart';
 import 'package:bank/screens/components/box_card.dart';
 import 'package:bank/screens/components/content_division.dart';
+import 'package:bank/screens/components/sections/account_actions.dart';
 import 'package:bank/screens/components/sections/header.dart';
 import 'package:bank/screens/components/sections/recentActivity.dart';
 import 'package:bank/screens/theme/theme_colors.dart';
@@ -17,6 +18,7 @@ class Home extends StatelessWidget {
         children: [
           Header(),
           Recentactivity(),
+          AccountActions(),
         ],
       ),
     );
