@@ -1,5 +1,9 @@
+import 'package:bank/screens/components/colorDot.dart';
 import 'package:bank/screens/components/box_card.dart';
+import 'package:bank/screens/components/content_division.dart';
 import 'package:bank/screens/components/sections/header.dart';
+import 'package:bank/screens/components/sections/recentActivity.dart';
+import 'package:bank/screens/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -12,7 +16,7 @@ class Home extends StatelessWidget {
       body: Column(
         children: [
           Header(),
-          BoxCard(boxContent: Text("Olá mundo"))
+          Recentactivity(),
         ],
       ),
     );

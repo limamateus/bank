@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 ThemeData MyTheme = ThemeData(
   primarySwatch: ThemeColors.primaryColor,
   primaryColor: ThemeColors.primaryColor,
+  progressIndicatorTheme: ProgressIndicatorThemeData(
+    color: ThemeColors.primaryColor
+  ),
   brightness: Brightness.dark,
   textTheme: TextTheme(
     bodyMedium: TextStyle(
