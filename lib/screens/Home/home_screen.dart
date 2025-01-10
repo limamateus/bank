@@ -7,6 +7,8 @@ import 'package:bank/screens/components/sections/recentActivity.dart';
 import 'package:bank/screens/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../components/sections/accountPoints.dart';
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -14,12 +16,15 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // Obs : Scafoold é um widget do material
     return Scaffold(
-      body: Column(
-        children: [
-          Header(),
-          Recentactivity(),
-          AccountActions(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(),
+            Recentactivity(),
+            AccountActions(),
+            AccountPoints()
+          ],
+        ),
       ),
     );
   }
